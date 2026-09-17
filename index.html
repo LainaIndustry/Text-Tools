@@ -9,14 +9,12 @@
     <link rel="canonical" href="https://wordcountpro.example.com/">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Free Online Word Counter - WordCountPro">
     <meta property="og:description" content="Count words, characters, sentences, and reading time instantly. Free, fast, and private.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wordcountpro.example.com/">
     <meta property="og:image" content="https://wordcountpro.example.com/assets/images/og-image.svg">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Free Online Word Counter - WordCountPro">
     <meta name="twitter:description" content="Count words, characters, sentences, and reading time instantly.">
@@ -26,7 +24,6 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/tools.css">
 
-    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,11 +33,7 @@
       "description": "Free online word counter that counts words, characters, sentences, paragraphs, and reading time.",
       "applicationCategory": "UtilityApplication",
       "operatingSystem": "Any",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
     }
     </script>
     <script type="application/ld+json">
@@ -48,30 +41,9 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a word counter?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A word counter is a tool that analyzes text and reports the number of words, characters, sentences, and paragraphs. It helps writers, students, and professionals meet specific length requirements."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is my text uploaded to a server?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. WordCountPro processes all text locally in your browser. Your text never leaves your device and is never stored on a server."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is reading time calculated?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Reading time is estimated at 225 words per minute, a widely used average for adult readers. Speaking time is estimated at 130 words per minute."
-          }
-        }
+        {"@type": "Question", "name": "What is a word counter?", "acceptedAnswer": {"@type": "Answer", "text": "A word counter is a tool that analyzes text and reports the number of words, characters, sentences, and paragraphs."}},
+        {"@type": "Question", "name": "Is my text uploaded to a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. WordCountPro processes all text locally in your browser."}},
+        {"@type": "Question", "name": "How is reading time calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Reading time is estimated at 225 words per minute. Speaking time is estimated at 130 words per minute."}}
       ]
     }
     </script>
@@ -84,11 +56,9 @@
             <a href="index.html" class="logo" aria-label="WordCountPro Home">
                 <img src="assets/images/logo.svg" alt="WordCountPro logo" width="180" height="40">
             </a>
-
             <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
                 <span class="hamburger"></span>
             </button>
-
             <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
                 <ul>
                     <li><a href="index.html" class="active">Word Counter</a></li>
@@ -131,6 +101,25 @@
     </header>
 
     <main id="main-content">
+
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="container hero-inner">
+                <span class="hero-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    100% Free · No Signup Required
+                </span>
+                <h1>Free Online Word Counter</h1>
+                <p class="hero-desc">Count words, characters, sentences, paragraphs and reading time instantly. Fast, accurate, and completely private — everything runs in your browser.</p>
+                <div class="hero-features">
+                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Instant results</span>
+                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> No upload</span>
+                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Works on mobile</span>
+                </div>
+            </div>
+        </section>
+
         <!-- Ad Position 1 -->
         <div class="ad-container container">
             <span class="ad-label">Advertisement</span>
@@ -138,20 +127,26 @@
             <!-- Replace this placeholder with your approved AdSense ad unit code -->
         </div>
 
-        <section class="hero container">
-            <h1>Free Online Word Counter</h1>
-            <p class="hero-desc">Count words, characters, sentences, paragraphs and reading time instantly with our free online word counter. Fast, accurate, private and easy to use.</p>
-        </section>
-
+        <!-- ============ MAIN TOOL ============ -->
         <section class="tool-section container" aria-labelledby="tool-heading">
             <h2 id="tool-heading" class="visually-hidden">Word Counter Tool</h2>
 
             <div class="editor-card">
+                <div class="editor-header">
+                    <div class="editor-dots" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="editor-label">Text Editor</span>
+                    <button type="button" class="editor-clear" data-action="clear" aria-label="Clear text">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+
                 <label for="textInput" class="visually-hidden">Paste or type your text</label>
-                <textarea id="textInput" class="text-editor" placeholder="Paste or type your text here..." spellcheck="false" aria-describedby="stats-help"></textarea>
+                <textarea id="textInput" class="text-editor" placeholder="Paste or type your text here...&#10;&#10;Your word count, character count, sentences, paragraphs, and reading time will appear instantly below." spellcheck="false" aria-describedby="stats-help"></textarea>
 
                 <div class="stats-grid" id="statsGrid" aria-live="polite">
-                    <div class="stat-card">
+                    <div class="stat-card stat-primary">
                         <span class="stat-value" id="statWords">0</span>
                         <span class="stat-label">Words</span>
                     </div>
@@ -161,7 +156,7 @@
                     </div>
                     <div class="stat-card">
                         <span class="stat-value" id="statCharsNoSpace">0</span>
-                        <span class="stat-label">Characters Without Spaces</span>
+                        <span class="stat-label">No Spaces</span>
                     </div>
                     <div class="stat-card">
                         <span class="stat-value" id="statSentences">0</span>
@@ -177,14 +172,13 @@
                     </div>
                 </div>
 
-                <p class="stat-note" id="stats-help">Page estimate uses approximately 250 words per page.</p>
+                <p class="stat-note" id="stats-help">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    Page estimate uses approximately 250 words per page.
+                </p>
 
                 <div class="action-buttons" role="group" aria-label="Text actions">
-                    <button type="button" class="btn btn-secondary" data-action="clear">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-                        Clear
-                    </button>
-                    <button type="button" class="btn btn-secondary" data-action="copy">
+                    <button type="button" class="btn btn-primary" data-action="copy">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                         Copy
                     </button>
@@ -196,7 +190,10 @@
                     <button type="button" class="btn btn-secondary" data-action="lowercase">lowercase</button>
                     <button type="button" class="btn btn-secondary" data-action="titlecase">Title Case</button>
                     <button type="button" class="btn btn-secondary" data-action="sentencecase">Sentence case</button>
-                    <button type="button" class="btn btn-secondary" data-action="removeSpaces">Remove Extra Spaces</button>
+                    <button type="button" class="btn btn-secondary" data-action="removeSpaces">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="12" x2="9" y2="12"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
+                        Clean Spaces
+                    </button>
                 </div>
             </div>
         </section>
@@ -208,9 +205,14 @@
             <!-- Replace this placeholder with your approved AdSense ad unit code -->
         </div>
 
+        <!-- ============ KEYWORD DENSITY ============ -->
         <section class="container section" aria-labelledby="keyword-heading">
-            <h2 id="keyword-heading">Keyword Density</h2>
-            <p class="section-desc">Keyword density is calculated from the words in your text. Stop words are excluded.</p>
+            <div class="section-header">
+                <div>
+                    <h2 id="keyword-heading">Keyword Density</h2>
+                    <p class="section-desc">See which words appear most often in your text. Stop words are excluded.</p>
+                </div>
+            </div>
             <div class="table-wrapper">
                 <table class="keyword-table" id="keywordTable">
                     <thead>
@@ -227,26 +229,47 @@
             </div>
         </section>
 
+        <!-- ============ READING STATISTICS ============ -->
         <section class="container section" aria-labelledby="reading-heading">
-            <h2 id="reading-heading">Reading Statistics</h2>
+            <div class="section-header">
+                <div>
+                    <h2 id="reading-heading">Reading Statistics</h2>
+                    <p class="section-desc">Estimates based on 225 words per minute reading speed and 130 words per minute speaking speed.</p>
+                </div>
+            </div>
             <div class="reading-grid" id="readingGrid">
                 <div class="reading-card">
+                    <div class="reading-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+                    </div>
                     <span class="reading-value" id="readingTime">0 min</span>
                     <span class="reading-label">Reading Time</span>
                 </div>
                 <div class="reading-card">
+                    <div class="reading-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                    </div>
                     <span class="reading-value" id="speakingTime">0 min</span>
                     <span class="reading-label">Speaking Time</span>
                 </div>
                 <div class="reading-card">
+                    <div class="reading-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+                    </div>
                     <span class="reading-value" id="avgWordLength">0</span>
                     <span class="reading-label">Avg Word Length</span>
                 </div>
                 <div class="reading-card">
+                    <div class="reading-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="21" y1="6" x2="3" y2="6"/><line x1="15" y1="12" x2="3" y2="12"/><line x1="17" y1="18" x2="3" y2="18"/></svg>
+                    </div>
                     <span class="reading-value" id="avgSentenceLength">0</span>
                     <span class="reading-label">Avg Sentence Length</span>
                 </div>
                 <div class="reading-card">
+                    <div class="reading-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
                     <span class="reading-value" id="readingLevel">—</span>
                     <span class="reading-label">Reading Level (est.)</span>
                 </div>
@@ -260,87 +283,116 @@
             <!-- Replace this placeholder with your approved AdSense ad unit code -->
         </div>
 
-        <section class="container section content-section" aria-labelledby="what-heading">
-            <h2 id="what-heading">What Is a Word Counter?</h2>
-            <p>A word counter is a digital tool that analyzes a piece of text and reports measurable details about it — most commonly the number of words, characters, sentences, and paragraphs. Writers, students, editors, marketers, and translators use word counters to confirm that a document meets a required length, to check readability, or to understand the structure of a draft.</p>
-            <p>Online word counters work entirely inside your browser. As you type or paste text, the tool reads the content of the text field, applies counting rules, and displays the results immediately. Because everything happens on your device, there is no waiting for a server response and no need to upload your document anywhere.</p>
-            <h3>Why Writers Use Word Counters</h3>
-            <ul>
-                <li>Meeting assignment limits for school, university, or professional work.</li>
-                <li>Staying within platform limits for social media posts and meta descriptions.</li>
-                <li>Estimating how long a piece will take to read or present.</li>
-                <li>Reviewing keyword usage when writing for search engines.</li>
-            </ul>
-        </section>
-
-        <section class="container section content-section" aria-labelledby="how-heading">
-            <h2 id="how-heading">How to Count Words?</h2>
-            <p>Counting words manually is straightforward but slow, especially for long documents. Here is the general process a word counter follows:</p>
-            <ol>
-                <li><strong>Read the text.</strong> The tool takes the full contents of the editor.</li>
-                <li><strong>Split on whitespace.</strong> Words are separated by spaces, tabs, and line breaks.</li>
-                <li><strong>Ignore empty entries.</strong> Multiple spaces or blank lines do not create extra words.</li>
-                <li><strong>Count the remaining tokens.</strong> Each remaining token is treated as a word.</li>
-                <li><strong>Repeat for related metrics.</strong> Characters, sentences, and paragraphs are counted with their own rules.</li>
-            </ol>
-            <p>Our word counter follows these rules so that results match what you would expect from a word processor for normal English text.</p>
-        </section>
-
-        <section class="container section content-section" aria-labelledby="why-heading">
-            <h2 id="why-heading">Why Use an Online Word Counter?</h2>
-            <p>An online word counter saves time and reduces errors compared with manual counting. It is useful in many situations:</p>
-            <ul>
-                <li><strong>Essays and assignments:</strong> confirm you meet a required word range.</li>
-                <li><strong>Blog posts and articles:</strong> keep posts consistent and estimate reading time for readers.</li>
-                <li><strong>Social media:</strong> stay within character limits on platforms that enforce them.</li>
-                <li><strong>Speeches and presentations:</strong> estimate speaking time from word count.</li>
-                <li><strong>Academic writing:</strong> check the length of abstracts, sections, and references.</li>
-            </ul>
-        </section>
-
+        <!-- ============ FEATURES ============ -->
         <section class="container section" aria-labelledby="features-heading">
-            <h2 id="features-heading">Word Counter Features</h2>
+            <div class="section-header center">
+                <h2 id="features-heading">Everything You Need in a Text Tool</h2>
+                <p class="section-desc">A complete toolkit for writers, students, editors, and content creators.</p>
+            </div>
             <div class="features-grid">
                 <article class="feature-card">
-                    <img src="assets/icons/word.svg" alt="" width="28" height="28" loading="lazy">
+                    <div class="feature-icon feature-icon-blue">
+                        <img src="assets/icons/word.svg" alt="" width="24" height="24" loading="lazy">
+                    </div>
                     <h3>Accurate Word Count</h3>
-                    <p>Counts words correctly across spaces, tabs, and line breaks.</p>
+                    <p>Counts words correctly across spaces, tabs, and line breaks — no false counts.</p>
                 </article>
                 <article class="feature-card">
-                    <img src="assets/icons/character.svg" alt="" width="28" height="28" loading="lazy">
+                    <div class="feature-icon feature-icon-purple">
+                        <img src="assets/icons/character.svg" alt="" width="24" height="24" loading="lazy">
+                    </div>
                     <h3>Character Counter</h3>
-                    <p>Shows total characters and characters excluding spaces.</p>
+                    <p>Total characters and characters excluding spaces, updated live.</p>
                 </article>
                 <article class="feature-card">
-                    <img src="assets/icons/sentence.svg" alt="" width="28" height="28" loading="lazy">
+                    <div class="feature-icon feature-icon-green">
+                        <img src="assets/icons/sentence.svg" alt="" width="24" height="24" loading="lazy">
+                    </div>
                     <h3>Sentence Counter</h3>
                     <p>Detects sentences ending in periods, question marks, and exclamation points.</p>
                 </article>
                 <article class="feature-card">
-                    <img src="assets/icons/paragraph.svg" alt="" width="28" height="28" loading="lazy">
+                    <div class="feature-icon feature-icon-orange">
+                        <img src="assets/icons/paragraph.svg" alt="" width="24" height="24" loading="lazy">
+                    </div>
                     <h3>Paragraph Counter</h3>
                     <p>Counts meaningful paragraphs separated by blank lines.</p>
                 </article>
                 <article class="feature-card">
-                    <img src="assets/icons/reading.svg" alt="" width="28" height="28" loading="lazy">
+                    <div class="feature-icon feature-icon-pink">
+                        <img src="assets/icons/reading.svg" alt="" width="24" height="24" loading="lazy">
+                    </div>
                     <h3>Reading Time</h3>
-                    <p>Estimates reading and speaking time from word count.</p>
+                    <p>Estimates reading and speaking time from your word count.</p>
                 </article>
                 <article class="feature-card">
-                    <img src="assets/icons/tools.svg" alt="" width="28" height="28" loading="lazy">
+                    <div class="feature-icon feature-icon-teal">
+                        <img src="assets/icons/tools.svg" alt="" width="24" height="24" loading="lazy">
+                    </div>
                     <h3>Keyword Density</h3>
-                    <p>Shows the most frequent words and their density.</p>
+                    <p>Shows the most frequent meaningful words and their density.</p>
                 </article>
                 <article class="feature-card">
-                    <img src="assets/icons/tools.svg" alt="" width="28" height="28" loading="lazy">
+                    <div class="feature-icon feature-icon-red">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
                     <h3>Text Formatting</h3>
-                    <p>Convert case, remove extra spaces, and clean up text.</p>
+                    <p>Convert case, remove extra spaces, and clean up messy text instantly.</p>
                 </article>
                 <article class="feature-card">
-                    <img src="assets/icons/word.svg" alt="" width="28" height="28" loading="lazy">
+                    <div class="feature-icon feature-icon-indigo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
                     <h3>Privacy-Friendly</h3>
-                    <p>Text is processed locally in your browser and never uploaded.</p>
+                    <p>Text is processed locally in your browser. Nothing is uploaded or stored.</p>
                 </article>
+            </div>
+        </section>
+
+        <!-- ============ CONTENT: WHAT IS ============ -->
+        <section class="container section" aria-labelledby="what-heading">
+            <div class="content-section">
+                <h2 id="what-heading">What Is a Word Counter?</h2>
+                <p>A word counter is a digital tool that analyzes a piece of text and reports measurable details about it — most commonly the number of words, characters, sentences, and paragraphs. Writers, students, editors, marketers, and translators use word counters to confirm that a document meets a required length, to check readability, or to understand the structure of a draft.</p>
+                <p>Online word counters work entirely inside your browser. As you type or paste text, the tool reads the content of the text field, applies counting rules, and displays the results immediately. Because everything happens on your device, there is no waiting for a server response and no need to upload your document anywhere.</p>
+                <h3>Why Writers Use Word Counters</h3>
+                <ul>
+                    <li>Meeting assignment limits for school, university, or professional work.</li>
+                    <li>Staying within platform limits for social media posts and meta descriptions.</li>
+                    <li>Estimating how long a piece will take to read or present.</li>
+                    <li>Reviewing keyword usage when writing for search engines.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ CONTENT: HOW TO ============ -->
+        <section class="container section" aria-labelledby="how-heading">
+            <div class="content-section">
+                <h2 id="how-heading">How to Count Words</h2>
+                <p>Counting words manually is straightforward but slow, especially for long documents. Here is the general process a word counter follows:</p>
+                <ol>
+                    <li><strong>Read the text.</strong> The tool takes the full contents of the editor.</li>
+                    <li><strong>Split on whitespace.</strong> Words are separated by spaces, tabs, and line breaks.</li>
+                    <li><strong>Ignore empty entries.</strong> Multiple spaces or blank lines do not create extra words.</li>
+                    <li><strong>Count the remaining tokens.</strong> Each remaining token is treated as a word.</li>
+                    <li><strong>Repeat for related metrics.</strong> Characters, sentences, and paragraphs are counted with their own rules.</li>
+                </ol>
+                <p>Our word counter follows these rules so that results match what you would expect from a word processor for normal English text.</p>
+            </div>
+        </section>
+
+        <!-- ============ CONTENT: WHY USE ============ -->
+        <section class="container section" aria-labelledby="why-heading">
+            <div class="content-section">
+                <h2 id="why-heading">Why Use an Online Word Counter?</h2>
+                <p>An online word counter saves time and reduces errors compared with manual counting. It is useful in many situations:</p>
+                <ul>
+                    <li><strong>Essays and assignments:</strong> confirm you meet a required word range.</li>
+                    <li><strong>Blog posts and articles:</strong> keep posts consistent and estimate reading time for readers.</li>
+                    <li><strong>Social media:</strong> stay within character limits on platforms that enforce them.</li>
+                    <li><strong>Speeches and presentations:</strong> estimate speaking time from word count.</li>
+                    <li><strong>Academic writing:</strong> check the length of abstracts, sections, and references.</li>
+                </ul>
             </div>
         </section>
 
@@ -351,114 +403,120 @@
             <!-- Replace this placeholder with your approved AdSense ad unit code -->
         </div>
 
+        <!-- ============ FAQ ============ -->
         <section class="container section" aria-labelledby="faq-heading">
-            <h2 id="faq-heading">Frequently Asked Questions</h2>
+            <div class="section-header center">
+                <h2 id="faq-heading">Frequently Asked Questions</h2>
+                <p class="section-desc">Quick answers to the most common questions about the word counter.</p>
+            </div>
             <div class="faq-list" id="faqList">
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>What is a word counter?</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
-                    <div class="faq-answer">
-                        <p>A word counter is a tool that analyzes text and reports the number of words, characters, sentences, and paragraphs. It helps writers, students, and professionals meet specific length requirements.</p>
-                    </div>
+                    <div class="faq-answer"><p>A word counter is a tool that analyzes text and reports the number of words, characters, sentences, and paragraphs. It helps writers, students, and professionals meet specific length requirements.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>How does the word counter work?</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
-                    <div class="faq-answer">
-                        <p>It reads the text in the editor and splits it on whitespace. Empty entries caused by extra spaces or blank lines are ignored, so only real words are counted. All processing happens in your browser.</p>
-                    </div>
+                    <div class="faq-answer"><p>It reads the text in the editor and splits it on whitespace. Empty entries caused by extra spaces or blank lines are ignored, so only real words are counted. All processing happens in your browser.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>Does the word counter count punctuation?</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
-                    <div class="faq-answer">
-                        <p>Punctuation attached to a word is counted as part of that word. A standalone punctuation mark surrounded by spaces is treated as a separate token. Sentence counts use periods, question marks, and exclamation points as boundaries.</p>
-                    </div>
+                    <div class="faq-answer"><p>Punctuation attached to a word is counted as part of that word. A standalone punctuation mark surrounded by spaces is treated as a separate token. Sentence counts use periods, question marks, and exclamation points as boundaries.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>Can I use the word counter on mobile?</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
-                    <div class="faq-answer">
-                        <p>Yes. The site is fully responsive and works on phones, tablets, and desktops. The editor and statistics adapt to small screens.</p>
-                    </div>
+                    <div class="faq-answer"><p>Yes. The site is fully responsive and works on phones, tablets, and desktops. The editor and statistics adapt to small screens.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>Is my text uploaded to a server?</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
-                    <div class="faq-answer">
-                        <p>No. WordCountPro processes all text locally in your browser. Your text never leaves your device and is never stored on a server.</p>
-                    </div>
+                    <div class="faq-answer"><p>No. WordCountPro processes all text locally in your browser. Your text never leaves your device and is never stored on a server.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>How is reading time calculated?</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
-                    <div class="faq-answer">
-                        <p>Reading time is estimated at 225 words per minute, a widely used average for adult readers. Speaking time is estimated at 130 words per minute.</p>
-                    </div>
+                    <div class="faq-answer"><p>Reading time is estimated at 225 words per minute, a widely used average for adult readers. Speaking time is estimated at 130 words per minute.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>How many words are on one page?</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
-                    <div class="faq-answer">
-                        <p>There is no single answer because page size, font, and margins vary. This tool uses an estimate of approximately 250 words per page for a standard double-spaced document.</p>
-                    </div>
+                    <div class="faq-answer"><p>There is no single answer because page size, font, and margins vary. This tool uses an estimate of approximately 250 words per page for a standard double-spaced document.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>Can I download my text?</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
-                    <div class="faq-answer">
-                        <p>Yes. Use the Download button to save your text as a .txt file. The download happens directly in your browser.</p>
-                    </div>
+                    <div class="faq-answer"><p>Yes. Use the Download button to save your text as a .txt file. The download happens directly in your browser.</p></div>
                 </div>
             </div>
         </section>
 
+        <!-- ============ RELATED TOOLS ============ -->
         <section class="container section" aria-labelledby="related-heading">
-            <h2 id="related-heading">Related Tools</h2>
+            <div class="section-header center">
+                <h2 id="related-heading">Explore More Free Tools</h2>
+                <p class="section-desc">More writing and text analysis tools to help you work faster.</p>
+            </div>
             <div class="related-grid">
                 <a class="related-card" href="pages/character-counter.html">
+                    <div class="related-icon"><img src="assets/icons/character.svg" alt="" width="22" height="22" loading="lazy"></div>
                     <h3>Character Counter</h3>
                     <p>Count characters with and without spaces.</p>
+                    <span class="related-arrow">→</span>
                 </a>
                 <a class="related-card" href="pages/sentence-counter.html">
+                    <div class="related-icon"><img src="assets/icons/sentence.svg" alt="" width="22" height="22" loading="lazy"></div>
                     <h3>Sentence Counter</h3>
                     <p>Count sentences in your text.</p>
+                    <span class="related-arrow">→</span>
                 </a>
                 <a class="related-card" href="pages/paragraph-counter.html">
+                    <div class="related-icon"><img src="assets/icons/paragraph.svg" alt="" width="22" height="22" loading="lazy"></div>
                     <h3>Paragraph Counter</h3>
                     <p>Count meaningful paragraphs.</p>
+                    <span class="related-arrow">→</span>
                 </a>
                 <a class="related-card" href="pages/case-converter.html">
+                    <div class="related-icon"><img src="assets/icons/tools.svg" alt="" width="22" height="22" loading="lazy"></div>
                     <h3>Case Converter</h3>
-                    <p>Convert text to upper, lower, title, or sentence case.</p>
+                    <p>Upper, lower, title, or sentence case.</p>
+                    <span class="related-arrow">→</span>
                 </a>
                 <a class="related-card" href="pages/text-cleaner.html">
+                    <div class="related-icon"><img src="assets/icons/tools.svg" alt="" width="22" height="22" loading="lazy"></div>
                     <h3>Text Cleaner</h3>
                     <p>Remove extra spaces and blank lines.</p>
+                    <span class="related-arrow">→</span>
                 </a>
                 <a class="related-card" href="pages/keyword-density.html">
+                    <div class="related-icon"><img src="assets/icons/word.svg" alt="" width="22" height="22" loading="lazy"></div>
                     <h3>Keyword Density</h3>
                     <p>Analyze keyword frequency.</p>
+                    <span class="related-arrow">→</span>
                 </a>
                 <a class="related-card" href="pages/reading-time-calculator.html">
+                    <div class="related-icon"><img src="assets/icons/reading.svg" alt="" width="22" height="22" loading="lazy"></div>
                     <h3>Reading Time Calculator</h3>
                     <p>Estimate reading and speaking time.</p>
+                    <span class="related-arrow">→</span>
                 </a>
             </div>
         </section>
@@ -475,7 +533,7 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <img src="assets/images/logo.svg" alt="WordCountPro" width="160" height="36">
-                <p>Free online writing and text analysis tools.</p>
+                <p>Free online writing and text analysis tools. No signup, no upload, no tracking of your text.</p>
             </div>
             <div class="footer-col">
                 <h3>Tools</h3>
