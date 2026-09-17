@@ -25,11 +25,20 @@
 
             let result = text;
             switch (action) {
-                case 'uppercase': result = window.WCPTextTools.toUpperCase(text); break;
-                case 'lowercase': result = window.WCPTextTools.toLowerCase(text); break;
-                case 'titlecase': result = window.WCPTextTools.toTitleCase(text); break;
-                case 'sentencecase': result = window.WCPTextTools.toSentenceCase(text); break;
-                default: return;
+                case 'uppercase':
+                    result = window.WCPTextTools.toUpperCase(text);
+                    break;
+                case 'lowercase':
+                    result = window.WCPTextTools.toLowerCase(text);
+                    break;
+                case 'titlecase':
+                    result = window.WCPTextTools.toTitleCase(text);
+                    break;
+                case 'sentencecase':
+                    result = window.WCPTextTools.toSentenceCase(text);
+                    break;
+                default:
+                    return;
             }
             renderOutput(result);
         }
@@ -44,20 +53,25 @@
             btn.addEventListener('click', function () {
                 const action = btn.getAttribute('data-action');
                 const text = textInput.value;
+
                 if (action === 'clear') {
                     textInput.value = '';
                     renderOutput('');
                     textInput.focus();
                     window.WCP.showToast('Text cleared');
                 } else if (action === 'copy') {
-                    window.WCP.copyToClipboard(output && output.textContent ? output.textContent : text);
+                    const outputText = output && output.textContent ? output.textContent : text;
+                    window.WCP.copyToClipboard(outputText);
                 } else if (action === 'download') {
-                    window.WCP.downloadText(output && output.textContent ? output.textContent : text, 'case-converted-text.txt');
+                    const outputText = output && output.textContent ? output.textContent : text;
+                    window.WCP.downloadText(outputText, 'case-converted-text.txt');
                 } else if (action === 'apply') {
                     if (output && output.textContent) {
                         textInput.value = output.textContent;
                         renderOutput('');
                         window.WCP.showToast('Applied to input');
+                    } else {
+                        window.WCP.showToast('No output to apply');
                     }
                 }
             });
