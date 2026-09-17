@@ -1,0 +1,16 @@
+# ads.txt for WordCountPro
+#
+# IMPORTANT: Do NOT invent or fabricate a publisher ID.
+# After your Google AdSense application is approved, Google will provide
+# your real publisher ID (it looks like pub-XXXXXXXXXXXXXXXX).
+#
+# Replace the placeholder line below with the exact line provided by Google.
+# The standard AdSense line looks like:
+#
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f8d2c9e3c4b5a6d7
+#
+# The certification authority ID (the last value) is also provided by Google.
+# Do not guess it.
+#
+# Until you have a real publisher ID, leave this file with only comments.
+# An empty or commented-out ads.txt is valid and will not cause errors.
