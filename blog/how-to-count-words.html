@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Count Words in a Text (Manual & Online Methods)</title>
+    <meta name="description" content="Learn how to count words in a text manually and with online tools. Understand how word processors handle punctuation, line breaks, and special cases.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wordcountpro.example.com/blog/how-to-count-words.html">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <meta property="og:title" content="How to Count Words in a Text">
+    <meta property="og:description" content="Manual and online methods for counting words accurately.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wordcountpro.example.com/blog/how-to-count-words.html">
+    <meta property="og:image" content="https://wordcountpro.example.com/assets/images/og-image.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/blog.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Count Words in a Text",
+      "description": "Manual and online methods for counting words accurately.",
+      "datePublished": "2026-01-15",
+      "dateModified": "2026-01-15",
+      "author": {
+        "@type": "Organization",
+        "name": "WordCountPro"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "WordCountPro"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wordcountpro.example.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wordcountpro.example.com/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "How to Count Words in a Text", "item": "https://wordcountpro.example.com/blog/how-to-count-words.html"}
+      ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo" aria-label="WordCountPro Home"><img src="../assets/images/logo.svg" alt="WordCountPro logo" width="180" height="40"></a>
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu"><span class="hamburger"></span></button>
+            <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="../index.html">Word Counter</a></li>
+                    <li><a href="../pages/character-counter.html">Character Counter</a></li>
+                    <li class="has-dropdown"><button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Text Tools <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="dropdown"><li><a href="../pages/sentence-counter.html">Sentence Counter</a></li><li><a href="../pages/paragraph-counter.html">Paragraph Counter</a></li><li><a href="../pages/case-converter.html">Case Converter</a></li><li><a href="../pages/text-cleaner.html">Text Cleaner</a></li><li><a href="../pages/keyword-density.html">Keyword Density</a></li><li><a href="../pages/reading-time-calculator.html">Reading Time Calculator</a></li></ul></li>
+                    <li><a href="index.html" class="active">Blog</a></li>
+                    <li class="has-dropdown"><button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="dropdown"><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../legal/privacy-policy.html">Privacy Policy</a></li></ul></li>
+                    <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <div class="article-layout">
+            <article class="article-content">
+                <header class="article-header">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Blog</a></li><li aria-current="page">How to Count Words</li></ol>
+                    </nav>
+                    <h1>How to Count Words in a Text</h1>
+                    <div class="article-meta">
+                        <span class="category">Writing</span>
+                        <time datetime="2026-01-15">January 15, 2026</time>
+                        <span>5 min read</span>
+                    </div>
+                </header>
+
+                <h2 id="intro">Introduction</h2>
+                <p>Counting words sounds simple, but the details matter. Different tools and word processors can return slightly different counts for the same text because they handle punctuation, line breaks, and special characters differently. This guide explains how word counting works and how to get an accurate count for any document.</p>
+
+                <h2 id="manual">Counting Words Manually</h2>
+                <p>For short passages, you can count words by reading through the text and tallying each word. A word is generally defined as a sequence of characters separated by spaces. In practice, this means:</p>
+                <ul>
+                    <li>Split the text on spaces and line breaks.</li>
+                    <li>Ignore empty entries caused by multiple spaces.</li>
+                    <li>Count each remaining group as one word.</li>
+                </ul>
+                <p>This method is reliable for a few sentences but becomes impractical for anything longer than a paragraph.</p>
+
+                <h2 id="word-processors">How Word Processors Count Words</h2>
+                <p>Microsoft Word, Google Docs, and similar applications use their own tokenization rules. They typically treat contractions as one word ("don't" counts as one word), hyphenated terms as one word ("well-known"), and numbers as words. This matches most people's expectations for prose.</p>
+                <p>Some word processors also count standalone symbols as words in certain contexts. If you see a count that seems off by one or two, check whether the document contains standalone punctuation or special characters.</p>
+
+                <h2 id="online-tools">Using an Online Word Counter</h2>
+                <p>An online word counter does the same job instantly. Paste your text into the editor, and the tool splits it on whitespace, ignores empty entries, and reports the total. This is the fastest option for most people and avoids manual errors.</p>
+                <p>Our <a href="../index.html">free word counter</a> runs entirely in your browser, so your text is not uploaded anywhere. It also reports characters, sentences, paragraphs, and estimated reading time at the same time.</p>
+
+                <h2 id="tricky-cases">Tricky Cases to Watch For</h2>
+                <ul>
+                    <li><strong>Hyphenated words:</strong> most tools count "state-of-the-art" as one word.</li>
+                    <li><strong>Contractions:</strong> "can't" and "won't" are usually one word each.</li>
+                    <li><strong>Numbers:</strong> "2026" is generally one word.</li>
+                    <li><strong>URLs and emails:</strong> these are often counted as one token.</li>
+                    <li><strong>Multiple spaces:</strong> should never create extra words.</li>
+                </ul>
+
+                <h2 id="conclusion">Conclusion</h2>
+                <p>Word counting is straightforward once you know the rules. For everyday writing, an online word counter gives you an accurate count in seconds and saves you from manual tallying. Use it alongside character and reading-time metrics to get a full picture of your text.</p>
+            </article>
+
+            <aside class="toc" aria-label="Table of contents">
+                <h2>On This Page</h2>
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#manual">Counting Words Manually</a></li>
+                    <li><a href="#word-processors">How Word Processors Count Words</a></li>
+                    <li><a href="#online-tools">Using an Online Word Counter</a></li>
+                    <li><a href="#tricky-cases">Tricky Cases to Watch For</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <section class="related-articles">
+            <h2>Related Articles</h2>
+            <div class="related-articles-grid">
+                <article class="blog-card"><div class="blog-card-body"><h2><a href="how-many-words-blog-post.html">How Many Words Should a Blog Post Have?</a></h2><p class="blog-card-excerpt">Find the right length for your next blog post.</p><a class="read-more" href="how-many-words-blog-post.html">Read More →</a></div></article>
+                <article class="blog-card"><div class="blog-card-body"><h2><a href="character-count-guide.html">Character Count vs Word Count</a></h2><p class="blog-card-excerpt">Understand the difference between these two metrics.</p><a class="read-more" href="character-count-guide.html">Read More →</a></div></article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand"><img src="../assets/images/logo.svg" alt="WordCountPro" width="160" height="36"><p>Free online writing and text analysis tools.</p></div>
+            <div class="footer-col"><h3>Tools</h3><ul><li><a href="../index.html">Word Counter</a></li><li><a href="../pages/character-counter.html">Character Counter</a></li><li><a href="../pages/sentence-counter.html">Sentence Counter</a></li><li><a href="../pages/paragraph-counter.html">Paragraph Counter</a></li><li><a href="../pages/case-converter.html">Case Converter</a></li><li><a href="../pages/text-cleaner.html">Text Cleaner</a></li></ul></div>
+            <div class="footer-col"><h3>Resources</h3><ul><li><a href="index.html">Blog</a></li><li><a href="how-to-count-words.html">Writing Guides</a></li><li><a href="../index.html#faq-heading">FAQs</a></li></ul></div>
+            <div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+            <div class="footer-col"><h3>Legal</h3><ul><li><a href="../legal/privacy-policy.html">Privacy Policy</a></li><li><a href="../legal/terms.html">Terms</a></li><li><a href="../legal/disclaimer.html">Disclaimer</a></li><li><a href="../legal/cookie-policy.html">Cookie Policy</a></li></ul></div>
+        </div>
+        <div class="container footer-bottom"><p>&copy; 2026 WordCountPro. All rights reserved.</p></div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>
