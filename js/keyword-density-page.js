@@ -18,6 +18,7 @@
             const text = textInput.value;
             const result = window.WCPKeyword.analyze(text, 25);
 
+            /* Clear table safely */
             while (tbody.firstChild) {
                 tbody.removeChild(tbody.firstChild);
             }
@@ -34,13 +35,17 @@
                 const fragment = document.createDocumentFragment();
                 result.keywords.forEach(function (entry) {
                     const tr = document.createElement('tr');
+
                     const tdWord = document.createElement('td');
                     tdWord.className = 'kw-word';
                     tdWord.textContent = entry.word;
+
                     const tdCount = document.createElement('td');
                     tdCount.textContent = entry.count.toLocaleString();
+
                     const tdDensity = document.createElement('td');
                     tdDensity.textContent = entry.density.toFixed(2) + '%';
+
                     tr.appendChild(tdWord);
                     tr.appendChild(tdCount);
                     tr.appendChild(tdDensity);
