@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter - Count Characters Online Free | WordCountPro</title>
+    <meta name="description" content="Free online character counter. Count total characters, characters without spaces, letters, digits, and punctuation instantly in your browser.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wordcountpro.example.com/pages/character-counter.html">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+
+    <meta property="og:title" content="Character Counter - WordCountPro">
+    <meta property="og:description" content="Count characters with and without spaces instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wordcountpro.example.com/pages/character-counter.html">
+    <meta property="og:image" content="https://wordcountpro.example.com/assets/images/og-image.svg">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/tools.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo" aria-label="WordCountPro Home">
+                <img src="../assets/images/logo.svg" alt="WordCountPro logo" width="180" height="40">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="../index.html">Word Counter</a></li>
+                    <li><a href="character-counter.html" class="active">Character Counter</a></li>
+                    <li class="has-dropdown">
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Text Tools <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                        <ul class="dropdown">
+                            <li><a href="sentence-counter.html">Sentence Counter</a></li>
+                            <li><a href="paragraph-counter.html">Paragraph Counter</a></li>
+                            <li><a href="case-converter.html">Case Converter</a></li>
+                            <li><a href="text-cleaner.html">Text Cleaner</a></li>
+                            <li><a href="keyword-density.html">Keyword Density</a></li>
+                            <li><a href="reading-time-calculator.html">Reading Time Calculator</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../blog/index.html">Blog</a></li>
+                    <li class="has-dropdown">
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                        <ul class="dropdown">
+                            <li><a href="../about.html">About</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                            <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                    <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container tool-page">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="../index.html">Home</a></li>
+                <li aria-current="page">Character Counter</li>
+            </ol>
+        </nav>
+
+        <h1>Character Counter</h1>
+        <p class="lead">Count the total characters in your text, including characters without spaces, letters, digits, and punctuation. Everything updates as you type.</p>
+
+        <div class="ad-container">
+            <span class="ad-label">Advertisement</span>
+            <!-- GOOGLE ADSENSE -->
+            <!-- Replace this placeholder with your approved AdSense ad unit code -->
+        </div>
+
+        <div class="editor-card">
+            <label for="textInput" class="visually-hidden">Your text</label>
+            <textarea id="textInput" class="text-editor" placeholder="Paste or type your text here..." spellcheck="false"></textarea>
+
+            <div class="stats-grid">
+                <div class="stat-card"><span class="stat-value" id="charTotal">0</span><span class="stat-label">Total Characters</span></div>
+                <div class="stat-card"><span class="stat-value" id="charNoSpaces">0</span><span class="stat-label">Without Spaces</span></div>
+                <div class="stat-card"><span class="stat-value" id="charLetters">0</span><span class="stat-label">Letters</span></div>
+                <div class="stat-card"><span class="stat-value" id="charDigits">0</span><span class="stat-label">Digits</span></div>
+                <div class="stat-card"><span class="stat-value" id="charPunctuation">0</span><span class="stat-label">Punctuation</span></div>
+                <div class="stat-card"><span class="stat-value" id="charWords">0</span><span class="stat-label">Words</span></div>
+            </div>
+
+            <div class="action-buttons" role="group" aria-label="Actions">
+                <button type="button" class="btn btn-secondary" data-action="clear">Clear</button>
+                <button type="button" class="btn btn-secondary" data-action="copy">Copy</button>
+                <button type="button" class="btn btn-secondary" data-action="download">Download</button>
+            </div>
+        </div>
+
+        <section class="section content-section">
+            <h2>What Is a Character Counter?</h2>
+            <p>A character counter reports how many individual characters a piece of text contains. This includes letters, numbers, spaces, punctuation, and line breaks. Many platforms — social networks, meta descriptions, SMS messages — have character limits, so a character counter helps you stay within them.</p>
+            <h2>Characters With and Without Spaces</h2>
+            <p>Some systems count every character including spaces, while others ignore whitespace. This tool shows both numbers so you can match whichever rule you are writing for.</p>
+            <h2>Why Character Count Matters</h2>
+            <ul>
+                <li>Search engines often display only about 155–160 characters of a meta description.</li>
+                <li>Social platforms limit posts and bios by character count.</li>
+                <li>Print and design layouts may require text to fit a fixed character budget.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Related Tools</h2>
+            <div class="related-grid">
+                <a class="related-card" href="../index.html"><h3>Word Counter</h3><p>Count words, sentences, and more.</p></a>
+                <a class="related-card" href="sentence-counter.html"><h3>Sentence Counter</h3><p>Count sentences in your text.</p></a>
+                <a class="related-card" href="paragraph-counter.html"><h3>Paragraph Counter</h3><p>Count meaningful paragraphs.</p></a>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <span class="ad-label">Advertisement</span>
+            <!-- GOOGLE ADSENSE -->
+            <!-- Replace this placeholder with your approved AdSense ad unit code -->
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="../assets/images/logo.svg" alt="WordCountPro" width="160" height="36">
+                <p>Free online writing and text analysis tools.</p>
+            </div>
+            <div class="footer-col"><h3>Tools</h3><ul><li><a href="../index.html">Word Counter</a></li><li><a href="character-counter.html">Character Counter</a></li><li><a href="sentence-counter.html">Sentence Counter</a></li><li><a href="paragraph-counter.html">Paragraph Counter</a></li><li><a href="case-converter.html">Case Converter</a></li><li><a href="text-cleaner.html">Text Cleaner</a></li></ul></div>
+            <div class="footer-col"><h3>Resources</h3><ul><li><a href="../blog/index.html">Blog</a></li><li><a href="../blog/how-to-count-words.html">Writing Guides</a></li><li><a href="../index.html#faq-heading">FAQs</a></li></ul></div>
+            <div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+            <div class="footer-col"><h3>Legal</h3><ul><li><a href="../legal/privacy-policy.html">Privacy Policy</a></li><li><a href="../legal/terms.html">Terms</a></li><li><a href="../legal/disclaimer.html">Disclaimer</a></li><li><a href="../legal/cookie-policy.html">Cookie Policy</a></li></ul></div>
+        </div>
+        <div class="container footer-bottom"><p>&copy; 2026 WordCountPro. All rights reserved.</p></div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/word-counter.js"></script>
+    <script src="../js/character-counter.js"></script>
+</body>
+</html>
