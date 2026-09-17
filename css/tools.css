@@ -1,112 +1,199 @@
 /* ============================================
-   WordCountPro - Tool Styles
+   WordCountPro - Tool Styles (Redesigned)
    ============================================ */
+
+.tool-section {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
 
 .editor-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    padding: 1.25rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
 }
 
+/* ---------- Editor header bar ---------- */
+.editor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+    background: var(--surface-alt);
+    border-bottom: 1px solid var(--border);
+    gap: 1rem;
+}
+
+.editor-dots {
+    display: flex;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+.editor-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-strong);
+}
+
+.editor-dots span:nth-child(1) { background: #ef4444; }
+.editor-dots span:nth-child(2) { background: #f59e0b; }
+.editor-dots span:nth-child(3) { background: #10b981; }
+
+.editor-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    flex: 1;
+    text-align: center;
+}
+
+.editor-clear {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-xs);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.editor-clear:hover {
+    background: var(--danger-soft);
+    color: var(--danger);
+}
+
+/* ---------- Text editor ---------- */
 .text-editor {
     width: 100%;
-    min-height: 260px;
+    min-height: 300px;
     resize: vertical;
-    padding: 1rem;
+    padding: 1.5rem;
     font-family: var(--font-sans);
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--text);
-    background: var(--surface-alt);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    background: var(--surface);
+    border: none;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s ease;
+    display: block;
 }
 
 .text-editor::placeholder {
-    color: var(--muted);
+    color: var(--muted-soft);
 }
 
 .text-editor:focus {
     outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px var(--primary-soft);
+    background: color-mix(in srgb, var(--surface) 97%, var(--primary-soft));
 }
 
-/* ---------- Stats Grid ---------- */
+/* ---------- Stats grid ---------- */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 0.75rem;
-    margin-top: 1.25rem;
+    gap: 0;
+    background: var(--surface-alt);
 }
 
 .stat-card {
-    background: var(--surface-alt);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 0.9rem 0.75rem;
+    padding: 1.25rem 0.75rem;
     text-align: center;
-    transition: border-color 0.15s ease;
+    border-right: 1px solid var(--border);
+    transition: background 0.15s ease;
+    position: relative;
+}
+
+.stat-card:last-child {
+    border-right: none;
 }
 
 .stat-card:hover {
-    border-color: var(--primary);
+    background: color-mix(in srgb, var(--surface-alt) 70%, var(--primary-soft));
+}
+
+.stat-card.stat-primary .stat-value {
+    color: var(--primary);
 }
 
 .stat-value {
     display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1.2;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.1;
     font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.35rem;
 }
 
 .stat-label {
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: var(--muted);
-    margin-top: 0.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
     line-height: 1.3;
 }
 
 .stat-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
     font-size: 0.8rem;
     color: var(--muted);
-    margin-top: 0.75rem;
-    text-align: center;
+    padding: 0.85rem 1.25rem;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    margin: 0;
 }
 
-/* ---------- Action Buttons ---------- */
+.stat-note svg {
+    flex-shrink: 0;
+    color: var(--muted-soft);
+}
+
+/* ---------- Action buttons ---------- */
 .action-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 1.25rem;
-    padding-top: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--surface);
     border-top: 1px solid var(--border);
 }
 
-/* ---------- Keyword Table ---------- */
+/* ---------- Keyword table ---------- */
 .table-wrapper {
     overflow-x: auto;
     border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     background: var(--surface);
+    box-shadow: var(--shadow-xs);
 }
 
 .keyword-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 360px;
+    min-width: 380px;
 }
 
 .keyword-table th,
 .keyword-table td {
-    padding: 0.75rem 1rem;
+    padding: 0.85rem 1.25rem;
     text-align: left;
     border-bottom: 1px solid var(--border);
     font-size: 0.9rem;
@@ -114,11 +201,11 @@
 
 .keyword-table th {
     background: var(--surface-alt);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
 }
 
 .keyword-table td {
@@ -142,61 +229,84 @@
     text-align: center;
     color: var(--muted);
     font-style: italic;
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
-/* ---------- Reading Grid ---------- */
+/* ---------- Reading statistics ---------- */
 .reading-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 0.75rem;
-    margin-top: 1.25rem;
+    gap: 1rem;
 }
 
 .reading-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 1.1rem 0.75rem;
+    border-radius: var(--radius-lg);
+    padding: 1.35rem 1rem;
     text-align: center;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-xs);
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.reading-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--primary) 40%, var(--border));
+}
+
+.reading-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background: var(--primary-soft);
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
 }
 
 .reading-value {
     display: block;
-    font-size: 1.35rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 800;
     color: var(--text);
     line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+    font-variant-numeric: tabular-nums;
 }
 
 .reading-label {
     display: block;
     font-size: 0.78rem;
     color: var(--muted);
-    margin-top: 0.35rem;
+    font-weight: 500;
 }
 
-/* ---------- Tool Page Specific ---------- */
+/* ---------- Tool page (inner pages) ---------- */
 .tool-page {
     padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .tool-page h1 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
 }
 
 .tool-page .lead {
     font-size: 1.05rem;
     color: var(--muted);
     max-width: 720px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
+    line-height: 1.65;
 }
 
 .output-box {
     width: 100%;
-    min-height: 120px;
-    padding: 1rem;
+    min-height: 140px;
+    padding: 1.25rem;
     font-family: var(--font-mono);
     font-size: 0.9rem;
     background: var(--surface-alt);
@@ -206,51 +316,43 @@
     white-space: pre-wrap;
     word-break: break-word;
     overflow-wrap: anywhere;
+    margin: 1rem 0;
+    line-height: 1.6;
 }
 
-/* ---------- Responsive tool grids ---------- */
-@media (max-width: 900px) {
-    .stats-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .reading-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+/* ---------- Breadcrumb ---------- */
+.breadcrumb {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
 }
 
-@media (max-width: 640px) {
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
-    }
-
-    .reading-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
-    }
-
-    .editor-card {
-        padding: 0.9rem;
-    }
-
-    .text-editor {
-        min-height: 200px;
-        font-size: 0.95rem;
-    }
-
-    .stat-value {
-        font-size: 1.25rem;
-    }
-
-    .action-buttons .btn {
-        flex: 1 1 calc(50% - 0.5rem);
-        justify-content: center;
-    }
+.breadcrumb ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
 }
 
-@media (max-width: 380px) {
-    .action-buttons .btn {
-        flex: 1 1 100%;
-    }
+.breadcrumb li {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.breadcrumb li + li::before {
+    content: "/";
+    margin-right: 0.4rem;
+    color: var(--border-strong);
+}
+
+.breadcrumb a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary);
 }
