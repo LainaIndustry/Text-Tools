@@ -1,0 +1,10 @@
+# robots.txt for WordCountPro
+# Replace the sitemap URL with your real domain after deployment.
+
+User-agent: *
+Allow: /
+
+# Block nothing — all pages are intended for indexing.
+# If you add private pages later, disallow them here.
+
+Sitemap: https://wordcountpro.example.com/sitemap.xml
