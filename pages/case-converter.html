@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Converter - Uppercase, Lowercase, Title Case | WordCountPro</title>
+    <meta name="description" content="Free online case converter. Convert text to UPPERCASE, lowercase, Title Case, or Sentence case instantly. No signup, no upload.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wordcountpro.example.com/pages/case-converter.html">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <meta property="og:title" content="Case Converter - WordCountPro">
+    <meta property="og:description" content="Convert text case instantly in your browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wordcountpro.example.com/pages/case-converter.html">
+    <meta property="og:image" content="https://wordcountpro.example.com/assets/images/og-image.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/tools.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo" aria-label="WordCountPro Home"><img src="../assets/images/logo.svg" alt="WordCountPro logo" width="180" height="40"></a>
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu"><span class="hamburger"></span></button>
+            <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="../index.html">Word Counter</a></li>
+                    <li><a href="character-counter.html">Character Counter</a></li>
+                    <li class="has-dropdown"><button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Text Tools <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="dropdown"><li><a href="sentence-counter.html">Sentence Counter</a></li><li><a href="paragraph-counter.html">Paragraph Counter</a></li><li><a href="case-converter.html">Case Converter</a></li><li><a href="text-cleaner.html">Text Cleaner</a></li><li><a href="keyword-density.html">Keyword Density</a></li><li><a href="reading-time-calculator.html">Reading Time Calculator</a></li></ul></li>
+                    <li><a href="../blog/index.html">Blog</a></li>
+                    <li class="has-dropdown"><button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="dropdown"><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../legal/privacy-policy.html">Privacy Policy</a></li></ul></li>
+                    <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container tool-page">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li aria-current="page">Case Converter</li></ol></nav>
+        <h1>Case Converter</h1>
+        <p class="lead">Convert your text to UPPERCASE, lowercase, Title Case, or Sentence case. The result appears below and can be copied or downloaded.</p>
+
+        <div class="ad-container"><span class="ad-label">Advertisement</span><!-- GOOGLE ADSENSE --><!-- Replace this placeholder with your approved AdSense ad unit code --></div>
+
+        <div class="editor-card">
+            <label for="textInput" class="visually-hidden">Your text</label>
+            <textarea id="textInput" class="text-editor" placeholder="Paste or type your text here..." spellcheck="false"></textarea>
+
+            <div class="action-buttons" role="group" aria-label="Convert case">
+                <button type="button" class="btn btn-primary" data-case="uppercase">UPPERCASE</button>
+                <button type="button" class="btn btn-primary" data-case="lowercase">lowercase</button>
+                <button type="button" class="btn btn-primary" data-case="titlecase">Title Case</button>
+                <button type="button" class="btn btn-primary" data-case="sentencecase">Sentence case</button>
+            </div>
+
+            <h2 class="visually-hidden">Output</h2>
+            <pre id="outputBox" class="output-box" aria-live="polite"></pre>
+
+            <div class="action-buttons" role="group" aria-label="Output actions">
+                <button type="button" class="btn btn-secondary" data-action="apply">Apply to Input</button>
+                <button type="button" class="btn btn-secondary" data-action="copy">Copy Output</button>
+                <button type="button" class="btn btn-secondary" data-action="download">Download</button>
+                <button type="button" class="btn btn-secondary" data-action="clear">Clear</button>
+            </div>
+        </div>
+
+        <section class="section content-section">
+            <h2>Case Conversion Options</h2>
+            <ul>
+                <li><strong>UPPERCASE:</strong> every letter is converted to a capital letter.</li>
+                <li><strong>lowercase:</strong> every letter is converted to a lowercase letter.</li>
+                <li><strong>Title Case:</strong> the first letter of every word is capitalized, and the rest is lowercase.</li>
+                <li><strong>Sentence case:</strong> the first letter of each sentence is capitalized, and the rest is lowercase.</li>
+            </ul>
+            <h2>When to Use a Case Converter</h2>
+            <p>Case converters are useful when you paste text that has inconsistent casing, when you want to normalize headings, or when you need to format text for a specific style. They save time compared with retyping.</p>
+        </section>
+
+        <section class="section">
+            <h2>Related Tools</h2>
+            <div class="related-grid">
+                <a class="related-card" href="text-cleaner.html"><h3>Text Cleaner</h3><p>Remove extra spaces and blank lines.</p></a>
+                <a class="related-card" href="../index.html"><h3>Word Counter</h3><p>Full text statistics.</p></a>
+                <a class="related-card" href="keyword-density.html"><h3>Keyword Density</h3><p>Analyze keyword frequency.</p></a>
+            </div>
+        </section>
+
+        <div class="ad-container"><span class="ad-label">Advertisement</span><!-- GOOGLE ADSENSE --><!-- Replace this placeholder with your approved AdSense ad unit code --></div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand"><img src="../assets/images/logo.svg" alt="WordCountPro" width="160" height="36"><p>Free online writing and text analysis tools.</p></div>
+            <div class="footer-col"><h3>Tools</h3><ul><li><a href="../index.html">Word Counter</a></li><li><a href="character-counter.html">Character Counter</a></li><li><a href="sentence-counter.html">Sentence Counter</a></li><li><a href="paragraph-counter.html">Paragraph Counter</a></li><li><a href="case-converter.html">Case Converter</a></li><li><a href="text-cleaner.html">Text Cleaner</a></li></ul></div>
+            <div class="footer-col"><h3>Resources</h3><ul><li><a href="../blog/index.html">Blog</a></li><li><a href="../blog/how-to-count-words.html">Writing Guides</a></li><li><a href="../index.html#faq-heading">FAQs</a></li></ul></div>
+            <div class="footer-col"><h3>Company</h3><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+            <div class="footer-col"><h3>Legal</h3><ul><li><a href="../legal/privacy-policy.html">Privacy Policy</a></li><li><a href="../legal/terms.html">Terms</a></li><li><a href="../legal/disclaimer.html">Disclaimer</a></li><li><a href="../legal/cookie-policy.html">Cookie Policy</a></li></ul></div>
+        </div>
+        <div class="container footer-bottom"><p>&copy; 2026 WordCountPro. All rights reserved.</p></div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/word-counter.js"></script>
+    <script src="../js/text-tools.js"></script>
+    <script src="../js/case-converter.js"></script>
+</body>
+</html>
