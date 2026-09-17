@@ -1,5 +1,5 @@
 /* ============================================
-   WordCountPro - Responsive Styles
+   WordCountPro - Responsive Styles (CORRECTED)
    ============================================ */
 
 /* ---------- Large desktop ---------- */
@@ -9,38 +9,49 @@
     }
 }
 
-/* ---------- Tablet ---------- */
+/* ---------- Tablet / Mobile nav ---------- */
 @media (max-width: 900px) {
+
     .nav-toggle {
         display: inline-flex;
+        order: 2;
     }
 
+    .logo {
+        order: 1;
+    }
+
+    /* Mobile nav panel */
     .primary-nav {
         position: absolute;
-        top: 64px;
+        top: 100%;
         left: 0;
         right: 0;
+        width: 100%;
         background: var(--surface);
         border-bottom: 1px solid var(--border);
         box-shadow: var(--shadow-md);
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
+        display: block;
+        flex: none;
+        z-index: 999;
     }
 
     .primary-nav.open {
-        max-height: 80vh;
+        max-height: 90vh;
         overflow-y: auto;
     }
 
-    .primary-nav ul {
+    .primary-nav > ul {
         flex-direction: column;
         align-items: stretch;
         gap: 0;
         padding: 0.75rem;
     }
 
-    .primary-nav li {
+    .primary-nav > ul > li {
         width: 100%;
     }
 
@@ -50,29 +61,40 @@
         justify-content: space-between;
         padding: 0.75rem;
         font-size: 1rem;
+        border-radius: var(--radius-sm);
     }
 
+    .primary-nav .dropdown-toggle {
+        text-align: left;
+    }
+
+    /* Dropdowns become inline on mobile */
     .dropdown {
         position: static;
         box-shadow: none;
         border: none;
         border-left: 2px solid var(--border);
         border-radius: 0;
-        margin-left: 0.75rem;
+        margin: 0 0 0.25rem 0.75rem;
         padding: 0;
         background: transparent;
+        min-width: 0;
+        width: auto;
     }
 
-    .has-dropdown.open .dropdown {
+    .has-dropdown.open > .dropdown {
         display: flex;
     }
 
-    .theme-toggle {
-        margin: 0.5rem 0.75rem 0;
+    .dropdown a {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.95rem;
     }
 
-    .header-inner {
-        position: relative;
+    .theme-toggle {
+        margin: 0.75rem 0 0 0;
+        width: 100%;
+        height: 44px;
     }
 }
 
@@ -125,6 +147,12 @@
 
     h1 { font-size: 1.5rem; }
     h2 { font-size: 1.2rem; }
+
+    .primary-nav a,
+    .primary-nav .dropdown-toggle {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+    }
 }
 
 /* ---------- Print ---------- */
